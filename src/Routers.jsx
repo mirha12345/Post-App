@@ -15,7 +15,7 @@ const Routers = () => {
       <Route path="/home" element={<Home/>}/>
       <Route path="/about" element={<About/>}/>
       <Route path="/Students" element={<Students/>}/>
-      <Route path="students/Students/:student_name" element={<GreetStudent/>}/>
+      <Route path="/:student_name" element={<GreetStudent/>}/>
 
       <Route path="*" element={<Contact/>} />
     </Routes>

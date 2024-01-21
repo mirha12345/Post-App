@@ -11,22 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.Banners span{
-  color: green;
-}
-.navbar-nav li{
-  font-weight: 500;
-  color: black;
-  
-}
-.navbar-nav .nav-link {
-  color: black;
-}
-.nav-link {
-  color: black;
-  font-weight: 500;
-}
-.fa-solid, .fas {
-  font-weight: 900;
-  margin-left: 4px;
-}

@@ -1,9 +1,8 @@
-
-import { useNavigate } from "react-router-dom";
-const  Data= () => {
+import React from "react";
+import { Link } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
  
- 
- let data= [
+  export const student = [
    {
      "userId": 1,
      "id": 1,
@@ -66,34 +65,51 @@ const  Data= () => {
    },
 
  ]
- const student=["ali","ahsn"]
- const navigate = useNavigate();
+ const  Data= () => {
+//  const student=["ali","ahsn"]
+//  const navigate = useNavigate();
   
-const handleClick = ((data)=>{
- if(data){
-   navigate(`/History/${data.id}`,{state:{key:data,key2:student}});
- }
-})
- return ( 
-   <>
-   {data.map((list, index) => (
-     <div className="container" key={index}>
-       <div className="row">
-         <div className="col-md-12">
-           <div className="card my-3">
-           <div className="card-header">
-               <h5 className="card-title">{list.title}</h5>
-               </div>
-               <div className="card-body">
-               <p className="card-text">{list.body}</p>
-             </div>
+// const handleClick = ((data)=>{
+//  if(data){
+//    navigate(`/History/${data.id}`,{state:{key:data,key2:student}});
+//  }
+// })
+//  return ( 
+//    <>
+//    {data.map((list, index) => (
+//      <div className="container" key={index}>
+//        <div className="row">
+//          <div className="col-md-12">
+//            <div className="card my-3">
+//            <div className="card-header">
+//                <h5 className="card-title">{list.title}</h5>
+//                </div>
+//                <div className="card-body">
+//                <p className="card-text">{list.body}</p>
+//              </div>
             
-                 <button onClick={()=>handleClick(list)} >Read More</button>
-           </div>
-         </div>
-       </div>
-     </div>
-   ))}</>
-  );
-}
+//                  <button onClick={()=>handleClick(list)} >Read More</button>
+//            </div>
+//          </div>
+//        </div>
+//      </div>
+//    ))}</>
+//   );
+// }
+
+
+return (
+  <div>
+    {student.map((student) => (
+      <>
+        {console.log(student,"stu")}
+        <Link to={`Data/${student.id}`}>
+          <h1>{student.id}</h1>
+          <h1>{student.body}</h1>
+        </Link>
+      </>
+    ))}
+  </div>
+);
+};
 export default Data;

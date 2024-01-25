@@ -15,6 +15,7 @@ const Banners = () => {
             </div>
             <div className="col-4">
                 <img src={doll} style={{width:500}}alt="" />
+                
 
             </div>
 

@@ -1,24 +1,24 @@
 
 import React from 'react';
 import './App.css';
+// import Fetch from './Components/Fetch';
 
 
-import About from './About'
-import Banners from './Banner'
+import Navbar from './Components/Navbar';
+import Banner from './Components/Banner';
 import { Route, Routes } from 'react-router-dom';
 
-import Datadetail from './History';
+import DetailPage from './Components/Detail';
 function App() { 
   return (
     <>
   
-    <About/>
-     
+    
+     <Navbar/>
      <Routes>
-        <Route path='/' element={<Banners/>}/>
-        <Route path="/History/:id" element={<Datadetail />} />
+        <Route path='/' element={<Banner/>}/>
+        <Route path="/Readmore/:id" element={<DetailPage/>} />
       </Routes>
-     
    
     </>
   );

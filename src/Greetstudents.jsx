@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 const GreetStudent = () => {
-  const name = useParams();
+  const {name} = useParams();
   console.log(name, "utuytut");
   return (
     <div>

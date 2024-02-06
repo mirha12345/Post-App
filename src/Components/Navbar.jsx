@@ -1,6 +1,5 @@
 import React from 'react'
 // import logo from '../Images/logo.png'
-import { Link } from 'react-router-dom'
 import tree from "../images/tree.png";
 const Navbar = () => {
     return (
@@ -27,16 +26,22 @@ const Navbar = () => {
                                 <a className="nav-link" href='/#'>about <i class="fa fa-heart"></i></a>
                             </li>
                         </ul>
-                        <form className="d-flex" >
-                            <a style={{ textDecoration: 'none', paddingTop: '10px', marginRight: '20px', color: 'black' }}
-                                href='/#'> <b>blog</b> <i class="fa-solid fa-message"></i></a>
-                            <button className="btn btn-planner" type="submit">
-                                <Link style={{ textDecoration: 'none', color: 'white' }}
-                                    to='/#'> planner <i class="fa-solid fa-leaf" style={{ color: 'white' }}></i>
-                                </Link>
-                            </button>
+                        <form className="d-flex nav-right" >
+                        <div>
+                              <strong style={{marginRight:10}}>blog <i style={{marginRight:5}} className="fa-solid fa-message"></i></strong>
+                        {/* <h3 className=''>blog <i className="fa-solid fa-message"></i></h3> */}
+                        <button style={{marginRight:10, }} className='btn btn-success' type="submit">
+    Planner<i className="fa fa-leaf" aria-hidden="true"></i>
+    </button>
+            {/* <strong style={{marginLeft:20}}>blog</strong> */}
+            {/* <button style={{ backgroundColor: 'green', borderRadius: '13px', color: 'white', marginLeft: 30 }}>Planner</button> */}
+          </div>
+                            
+                            
                         </form>
                     </div>
+          
+
                 </div>
             </nav>
 
@@ -45,3 +50,9 @@ const Navbar = () => {
 }
 
 export default Navbar
+{/* <div className="d-flex nav-right ">
+<h3 className='ml-5'>blog <i className="fa-solid fa-message"></i></h3>
+<button className="btn green-btn btn-outline-success" type="submit">
+    Planner<i className="fa fa-leaf" aria-hidden="true"></i>
+</button>
+</div> */}

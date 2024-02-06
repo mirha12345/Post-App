@@ -1,10 +1,9 @@
 
 import React from 'react';
-// import { useParams } from 'react-router-dom';
-// import Data from './Data';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
 const DetailPage = () => {
 //    let { id } = useParams();
@@ -12,9 +11,10 @@ const DetailPage = () => {
 // console.log(state,'------state');
 // const PostData = data.find(PostData => String(PostData.id) === id);
 const [data, setData] = useState([]);
-
+const{id}=useParams()
 useEffect(() => {
-  axios.get("https://jsonplaceholder.typicode.com/posts/2")
+ 
+  axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
     .then((response) => {
       setData(response.data);
     })

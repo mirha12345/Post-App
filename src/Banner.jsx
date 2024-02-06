@@ -2,7 +2,7 @@ import React from "react";
 import doll from "./images/doll.png"
 import Data from "./Data";
 
-const Banners = () => {
+const Banner = () => {
     return ( 
 
         <div className="Banners">
@@ -22,11 +22,11 @@ const Banners = () => {
         </div>
 
        </div>
-       <Data/>
+       <Card/>
         </div>
    
            
      );
     }
 
-     export default Banners;
+     export default Banner;
